@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box shadow Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="main">
+        <div class="result">
+            <div id="element"></div>
+        </div>
+        <div class="sliders">
+            <div class="slider-wrapper">
+                <label for="h-shadow">Horizontal Shadow: </label>
+                <input type="range" id="h-shadow" max="50" min="-30" value="0" />
+            </div>
+            <div class="slider-wrapper">
+                <label for="v-shadow">Vertical Shadow: </label>
+                <input type="range" id="v-shadow" max="50" min="-30" value="0" />
+            </div>
+            <div class="slider-wrapper">
+                <label for="blur-radius">Blur Radius: </label>
+                <input type="range" id="blur-radius" max="50" min="0" value="0" />
+            </div>
+            <div class="slider-wrapper">
+                <label for="spread-radius">Spread Radius: </label>
+                <input type="range" id="spread-radius" max="40" min="-10" value="0" />
+            </div>
+            <div class="slider-wrapper">
+                <label for="border-radius">Border Radius: </label>
+                <input type="range" id="border-radius" max="80" min="0" value="0" />
+            </div>
+            <div class="slider-wrapper">
+                <label for="shadow-color-opacity">Shadow Color Opacity: </label>
+                <input type="range" id="shadow-color-opacity" max="1" min="0" step="0.1" value="1"/>
+            </div>
+            <div class="slider-wrapper">
+                <label for="shadow-color">Shadow Color: </label>
+                <input type="color" id="shadow-color"/>
+            </div>
+            <div class="input-wrapper">
+                <label for="box-color">Box Color</label><br>
+                <input type="color" id="box-color"  value="#7f7171"/>
+            </div>
+            <div class="input-wrapper check">
+                <label for="shadow-inset">Inset Shadow</label>
+                <input type="checkbox" id="shadow-inset" />
+                <label class="terms-label" for="shadow-inset">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 200 200" class="checkbox-svg">
+                      <mask fill="white" id="path-1-inside-1_476_5-37">
+                        <rect height="200" width="200"></rect>
+                      </mask>
+                      <rect mask="url(#path-1-inside-1_476_5-37)" stroke-width="40" class="checkbox-box" id="checkBox" height="200" width="200"></rect>
+                      <path stroke-width="15" d="M52 111.018L76.9867 136L149 64" class="checkbox-tick" id="checkTick"></path>
+                    </svg>
+                    <span class="label-text"></span>
+                  </label>
+
+            </div>
+        </div>
+        <div class="code-wrapper">
+            <div id="code"></div>
+            <button id="copyBtn" onclick="copyCode()">Copy <iconify-icon 
+               class="copy" icon="fluent:copy-16-filled"></iconify-icon></button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+</body>
+</html>
