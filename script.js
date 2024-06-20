@@ -42,15 +42,18 @@ function generateShadow(){
 
 }
 
+
+copyBtn.addEventListener('click', ()=>{
+    copyBtn.textContent = 'Copied'
+    setTimeout(() => {
+        copyBtn.textContent = 'Copy'
+    }, 1500);
+})
 // copy to clipboard
 function copyCode(){
     // code.select()
     // document.execCommand('copy')
     navigator.clipboard.writeText(code.textContent)
-    copyBtn.innerText = "Copy"
-      setTimeout(() => {
-        copyBtn.textContent = 'Copy'
-    }, 1500);
     // alert("Code Copied to Clipboard")
 }
 
