@@ -66,5 +66,15 @@ function hextoRgba(shadowColor, shadowColorOpacity){
     return  `rgba(${r}, ${g}, ${b}, ${shadowColorOpacity})`
 }
 
+
+        document.addEventListener('contextmenu', function(e) {
+   e.preventDefault();
+ });
+
+  document.addEventListener('keydown', function(e) {
+   if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && ['I', 'J', 'C'].includes(e.key))) {
+      e.preventDefault();
+    }
+ });
 // call the generateShadow function on every page load
 window.onload = generateShadow()
